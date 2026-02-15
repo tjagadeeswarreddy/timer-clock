@@ -2,6 +2,10 @@
 
 A simple timer app built with React.
 
+## Live Demo
+
+https://tjagadeeswarreddy.github.io/timer-clock/
+
 It has two modes:
 - Countdown timer: Set a time and count down to zero.
 - Stopwatch: Start from zero and count up.
