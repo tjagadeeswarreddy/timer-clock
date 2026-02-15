@@ -1,0 +1,149 @@
+.timer-panel {
+  width: min(620px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(22, 53, 92, 0.18);
+  text-align: center;
+}
+
+.timer-panel-alert {
+  animation: alert-pulse 0.45s ease-in-out 6;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+}
+
+.timer-title {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  color: #16355c;
+}
+
+.mode-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.mode-button {
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.mode-button.active {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+
+.timer-display {
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+}
+
+.timer-alert-text {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.hours-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #1f2937;
+  margin-bottom: 14px;
+}
+
+.timer-setter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+  align-items: end;
+}
+
+.timer-setter.with-hours {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.timer-setter label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #374151;
+  text-align: left;
+  gap: 6px;
+}
+
+.timer-setter input {
+  padding: 10px;
+  border: 1px solid #c6d2df;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.stopwatch-hint {
+  margin: 0 0 16px;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.timer-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.timer-panel button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.timer-panel button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.set-button {
+  background: #0e7490;
+}
+
+@keyframes alert-pulse {
+  0% {
+    background: #ffffff;
+  }
+
+  50% {
+    background: #fee2e2;
+  }
+
+  100% {
+    background: #ffffff;
+  }
+}
+
+@media (max-width: 720px) {
+  .timer-setter,
+  .timer-setter.with-hours {
+    grid-template-columns: 1fr;
+  }
+
+  .timer-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
